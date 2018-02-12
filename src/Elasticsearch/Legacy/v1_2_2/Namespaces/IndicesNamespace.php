@@ -5,9 +5,9 @@
  * Time: 5:13 PM
  */
 
-namespace Elasticsearch\Namespaces;
+namespace Elasticsearch\Legacy\v1_2_2\Namespaces;
 
-use Elasticsearch\Common\Exceptions\Missing404Exception;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\Missing404Exception;
 
 /**
  * Class IndicesNamespace

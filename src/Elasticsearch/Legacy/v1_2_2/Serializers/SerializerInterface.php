@@ -5,7 +5,7 @@
  * Time: 4:40 AM
  */
 
-namespace Elasticsearch\Serializers;
+namespace Elasticsearch\Legacy\v1_2_2\Serializers;
 
 interface SerializerInterface
 {

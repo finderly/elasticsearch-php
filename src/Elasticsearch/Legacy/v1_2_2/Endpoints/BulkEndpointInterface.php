@@ -5,11 +5,11 @@
  * Time: 8:57 PM
  */
 
-namespace Elasticsearch\Endpoints;
+namespace Elasticsearch\Legacy\v1_2_2\Endpoints;
 
 
-use Elasticsearch\Serializers\SerializerInterface;
-use Elasticsearch\Transport;
+use Elasticsearch\Legacy\v1_2_2\Serializers\SerializerInterface;
+use Elasticsearch\Legacy\v1_2_2\Transport;
 
 interface BulkEndpointInterface {
     public function __construct(Transport $transport, SerializerInterface $serializer);

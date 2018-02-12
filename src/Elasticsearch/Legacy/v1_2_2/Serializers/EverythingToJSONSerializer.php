@@ -5,7 +5,7 @@
  * Time: 9:04 AM
  */
 
-namespace Elasticsearch\Serializers;
+namespace Elasticsearch\Legacy\v1_2_2\Serializers;
 
 /**
  * Class EverythingToJSONSerializer

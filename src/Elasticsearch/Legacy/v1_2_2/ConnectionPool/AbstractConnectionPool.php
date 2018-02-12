@@ -5,13 +5,13 @@
  * Time: 7:25 PM
  */
 
-namespace Elasticsearch\ConnectionPool;
+namespace Elasticsearch\Legacy\v1_2_2\ConnectionPool;
 
 
-use Elasticsearch\Common\Exceptions\InvalidArgumentException;
-use Elasticsearch\ConnectionPool\Selectors\SelectorInterface;
-use Elasticsearch\Connections\AbstractConnection;
-use Elasticsearch\Connections\ConnectionFactory;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\InvalidArgumentException;
+use Elasticsearch\Legacy\v1_2_2\ConnectionPool\Selectors\SelectorInterface;
+use Elasticsearch\Legacy\v1_2_2\Connections\AbstractConnection;
+use Elasticsearch\Legacy\v1_2_2\Connections\ConnectionFactory;
 
 abstract class AbstractConnectionPool
 {

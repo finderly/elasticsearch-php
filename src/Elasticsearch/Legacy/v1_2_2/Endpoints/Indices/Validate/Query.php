@@ -5,10 +5,10 @@
  * Time: 16:47:11 pm
  */
 
-namespace Elasticsearch\Endpoints\Indices\Validate;
+namespace Elasticsearch\Legacy\v1_2_2\Endpoints\Indices\Validate;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
-use Elasticsearch\Common\Exceptions;
+use Elasticsearch\Legacy\v1_2_2\Endpoints\AbstractEndpoint;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions;
 
 /**
  * Class Query

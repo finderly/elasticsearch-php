@@ -5,7 +5,7 @@
  * Time: 3:32 PM
  */
 
-namespace Elasticsearch\Common;
+namespace Elasticsearch\Legacy\v1_2_2\Common;
 
 
 use Psr\Log\AbstractLogger;

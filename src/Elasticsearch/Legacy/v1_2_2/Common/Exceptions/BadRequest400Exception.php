@@ -1,6 +1,6 @@
 <?php
 
-namespace Elasticsearch\Common\Exceptions;
+namespace Elasticsearch\Legacy\v1_2_2\Common\Exceptions;
 
 /**
  * BadRequest400Exception, thrown on 400 conflict http error

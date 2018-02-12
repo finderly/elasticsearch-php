@@ -5,16 +5,16 @@
  * Time: 8:26 AM
  */
 
-namespace Elasticsearch\Common;
+namespace Elasticsearch\Legacy\v1_2_2\Common;
 
-use Elasticsearch\Common\Exceptions\RuntimeException;
-use Elasticsearch\Endpoints;
-use Elasticsearch\Namespaces\CatNamespace;
-use Elasticsearch\Namespaces\ClusterNamespace;
-use Elasticsearch\Namespaces\IndicesNamespace;
-use Elasticsearch\Namespaces\NodesNamespace;
-use Elasticsearch\Namespaces\SnapshotNamespace;
-use Elasticsearch\Transport;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\RuntimeException;
+use Elasticsearch\Legacy\v1_2_2\Endpoints;
+use Elasticsearch\Legacy\v1_2_2\Namespaces\CatNamespace;
+use Elasticsearch\Legacy\v1_2_2\Namespaces\ClusterNamespace;
+use Elasticsearch\Legacy\v1_2_2\Namespaces\IndicesNamespace;
+use Elasticsearch\Legacy\v1_2_2\Namespaces\NodesNamespace;
+use Elasticsearch\Legacy\v1_2_2\Namespaces\SnapshotNamespace;
+use Elasticsearch\Legacy\v1_2_2\Transport;
 use Psr\Log;
 use Pimple\Container as Pimple;
 

@@ -5,7 +5,7 @@
  * Time: 11:42 AM
  */
 
-namespace Elasticsearch\Connections;
+namespace Elasticsearch\Legacy\v1_2_2\Connections;
 
 use Psr\Log\LoggerInterface;
 

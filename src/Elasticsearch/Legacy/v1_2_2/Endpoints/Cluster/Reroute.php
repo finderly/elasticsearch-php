@@ -5,10 +5,10 @@
  * Time: 14:34:49 pm
  */
 
-namespace Elasticsearch\Endpoints\Cluster;
+namespace Elasticsearch\Legacy\v1_2_2\Endpoints\Cluster;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
-use Elasticsearch\Common\Exceptions;
+use Elasticsearch\Legacy\v1_2_2\Endpoints\AbstractEndpoint;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions;
 
 /**
  * Class Reroute

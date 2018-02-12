@@ -5,11 +5,11 @@
  * Time: 3:58 PM
  */
 
-namespace Elasticsearch\Endpoints\Indices\Warmer;
+namespace Elasticsearch\Legacy\v1_2_2\Endpoints\Indices\Warmer;
 
 
-use Elasticsearch\Common\Exceptions\RuntimeException;
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\RuntimeException;
+use Elasticsearch\Legacy\v1_2_2\Endpoints\AbstractEndpoint;
 
 abstract class AbstractWarmerEndpoint extends AbstractEndpoint
 {

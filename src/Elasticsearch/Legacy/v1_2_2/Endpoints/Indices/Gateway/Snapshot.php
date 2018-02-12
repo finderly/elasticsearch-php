@@ -5,10 +5,10 @@
  * Time: 13:33:19 pm
  */
 
-namespace Elasticsearch\Endpoints\Indices\Gateway;
+namespace Elasticsearch\Legacy\v1_2_2\Endpoints\Indices\Gateway;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
-use Elasticsearch\Common\Exceptions;
+use Elasticsearch\Legacy\v1_2_2\Endpoints\AbstractEndpoint;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions;
 
 /**
  * Class Snapshot

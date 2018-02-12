@@ -5,10 +5,10 @@
  * Time: 10:02 PM
  */
 
-namespace Elasticsearch\ConnectionPool\Selectors;
+namespace Elasticsearch\Legacy\v1_2_2\ConnectionPool\Selectors;
 
 
-use Elasticsearch\Connections\ConnectionInterface;
+use Elasticsearch\Legacy\v1_2_2\Connections\ConnectionInterface;
 
 /**
  * Class RoundRobinSelector

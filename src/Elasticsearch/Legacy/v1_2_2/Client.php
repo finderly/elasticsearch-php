@@ -5,20 +5,20 @@
  * Time: 11:41 AM
  */
 
-namespace Elasticsearch;
+namespace Elasticsearch\Legacy\v1_2_2;
 
-use Elasticsearch\Common\DICBuilder;
-use Elasticsearch\Common\EmptyLogger;
-use Elasticsearch\Common\Exceptions;
-use Elasticsearch\Common\Exceptions\Missing404Exception;
-use Elasticsearch\Common\Exceptions\RoutingMissingException;
-use Elasticsearch\Common\Exceptions\UnexpectedValueException;
-use Elasticsearch\Endpoints;
-use Elasticsearch\Namespaces\CatNamespace;
-use Elasticsearch\Namespaces\ClusterNamespace;
-use Elasticsearch\Namespaces\IndicesNamespace;
-use Elasticsearch\Namespaces\NodesNamespace;
-use Elasticsearch\Namespaces\SnapshotNamespace;
+use Elasticsearch\Legacy\v1_2_2\Common\DICBuilder;
+use Elasticsearch\Legacy\v1_2_2\Common\EmptyLogger;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\Missing404Exception;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\RoutingMissingException;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\UnexpectedValueException;
+use Elasticsearch\Legacy\v1_2_2\Endpoints;
+use Elasticsearch\Legacy\v1_2_2\Namespaces\CatNamespace;
+use Elasticsearch\Legacy\v1_2_2\Namespaces\ClusterNamespace;
+use Elasticsearch\Legacy\v1_2_2\Namespaces\IndicesNamespace;
+use Elasticsearch\Legacy\v1_2_2\Namespaces\NodesNamespace;
+use Elasticsearch\Legacy\v1_2_2\Namespaces\SnapshotNamespace;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Monolog\Processor\IntrospectionProcessor;

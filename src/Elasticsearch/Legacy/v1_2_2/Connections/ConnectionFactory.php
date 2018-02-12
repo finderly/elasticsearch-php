@@ -5,9 +5,9 @@
  * Time: 1:29 PM
  */
 
-namespace Elasticsearch\Connections;
+namespace Elasticsearch\Legacy\v1_2_2\Connections;
 
-use Elasticsearch\Common\AbstractFactory;
+use Elasticsearch\Legacy\v1_2_2\Common\AbstractFactory;
 
 class ConnectionFactory extends AbstractFactory
 {

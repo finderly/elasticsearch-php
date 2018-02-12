@@ -5,7 +5,7 @@
  * Time: 1:05 PM
  */
 
-namespace Elasticsearch\Common\Exceptions;
+namespace Elasticsearch\Legacy\v1_2_2\Common\Exceptions;
 
 /**
  * RoutingMissingException, thrown on when a routing value is required but

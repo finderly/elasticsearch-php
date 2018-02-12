@@ -29,7 +29,7 @@
   },
   "autoload": {
     "psr-0": {
-      "Elasticsearch": "src/",
+      "Elasticsearch\\Legacy\\v1_2_2": "src/",
       "Elasticsearch\\Tests" : "tests/",
       "Elasticsearch\\Benchmarks" : "benchmarks/"
     }

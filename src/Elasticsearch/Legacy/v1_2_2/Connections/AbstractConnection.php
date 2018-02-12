@@ -5,12 +5,12 @@
  * Time: 11:00 PM
  */
 
-namespace Elasticsearch\Connections;
+namespace Elasticsearch\Legacy\v1_2_2\Connections;
 
-use Elasticsearch\Common\Exceptions\Curl\CouldNotConnectToHost;
-use Elasticsearch\Common\Exceptions\Curl\CouldNotResolveHostException;
-use Elasticsearch\Common\Exceptions\Curl\OperationTimeoutException;
-use Elasticsearch\Common\Exceptions\TransportException;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\Curl\CouldNotConnectToHost;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\Curl\CouldNotResolveHostException;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\Curl\OperationTimeoutException;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\TransportException;
 use Psr\Log\LoggerInterface;
 
 /**

@@ -5,14 +5,14 @@
  * Time: 9:51 PM
  */
 
-namespace Elasticsearch;
+namespace Elasticsearch\Legacy\v1_2_2;
 
-use Elasticsearch\Common\Exceptions\TransportException;
-use Elasticsearch\Common\Exceptions;
-use Elasticsearch\ConnectionPool\AbstractConnectionPool;
-use Elasticsearch\Connections\AbstractConnection;
-use Elasticsearch\Connections\ConnectionInterface;
-use Elasticsearch\Serializers\SerializerInterface;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\TransportException;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions;
+use Elasticsearch\Legacy\v1_2_2\ConnectionPool\AbstractConnectionPool;
+use Elasticsearch\Legacy\v1_2_2\Connections\AbstractConnection;
+use Elasticsearch\Legacy\v1_2_2\Connections\ConnectionInterface;
+use Elasticsearch\Legacy\v1_2_2\Serializers\SerializerInterface;
 use Psr\Log\LoggerInterface;
 
 /**

@@ -5,10 +5,10 @@
  * Time: 5:10 PM
  */
 
-namespace Elasticsearch\Namespaces;
+namespace Elasticsearch\Legacy\v1_2_2\Namespaces;
 
-use Elasticsearch\Common\Exceptions\UnexpectedValueException;
-use Elasticsearch\Transport;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\UnexpectedValueException;
+use Elasticsearch\Legacy\v1_2_2\Transport;
 
 /**
  * Class AbstractNamespace

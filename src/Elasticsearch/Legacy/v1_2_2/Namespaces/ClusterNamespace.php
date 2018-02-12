@@ -5,7 +5,7 @@
  * Time: 5:13 PM
  */
 
-namespace Elasticsearch\Namespaces;
+namespace Elasticsearch\Legacy\v1_2_2\Namespaces;
 
 /**
  * Class ClusterNamespace

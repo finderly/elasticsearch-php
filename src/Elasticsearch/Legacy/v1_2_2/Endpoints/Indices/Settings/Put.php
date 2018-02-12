@@ -5,10 +5,10 @@
  * Time: 14:34:49 pm
  */
 
-namespace Elasticsearch\Endpoints\Indices\Settings;
+namespace Elasticsearch\Legacy\v1_2_2\Endpoints\Indices\Settings;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
-use Elasticsearch\Common\Exceptions;
+use Elasticsearch\Legacy\v1_2_2\Endpoints\AbstractEndpoint;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions;
 
 /**
  * Class Put

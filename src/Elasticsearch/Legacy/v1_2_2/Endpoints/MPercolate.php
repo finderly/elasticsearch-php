@@ -5,12 +5,12 @@
  * Time: 16:47:11 pm
  */
 
-namespace Elasticsearch\Endpoints;
+namespace Elasticsearch\Legacy\v1_2_2\Endpoints;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
-use Elasticsearch\Common\Exceptions;
-use Elasticsearch\Serializers\SerializerInterface;
-use Elasticsearch\Transport;
+use Elasticsearch\Legacy\v1_2_2\Endpoints\AbstractEndpoint;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions;
+use Elasticsearch\Legacy\v1_2_2\Serializers\SerializerInterface;
+use Elasticsearch\Legacy\v1_2_2\Transport;
 
 /**
  * Class MPercolate

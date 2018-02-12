@@ -5,11 +5,11 @@
  * Time: 9:49 AM
  */
 
-namespace Elasticsearch\Endpoints;
+namespace Elasticsearch\Legacy\v1_2_2\Endpoints;
 
 
-use Elasticsearch\Common\Exceptions\UnexpectedValueException;
-use Elasticsearch\Transport;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\UnexpectedValueException;
+use Elasticsearch\Legacy\v1_2_2\Transport;
 
 /**
  * Class AbstractEndpoint

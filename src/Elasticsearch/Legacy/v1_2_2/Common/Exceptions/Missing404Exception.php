@@ -11,7 +11,7 @@
  * @link     http://elasticsearch.org
  */
 
-namespace Elasticsearch\Common\Exceptions;
+namespace Elasticsearch\Legacy\v1_2_2\Common\Exceptions;
 
 /**
  * Generic Exception interface

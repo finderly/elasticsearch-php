@@ -5,10 +5,10 @@
  * Time: 2:51 PM
  */
 
-namespace Elasticsearch\Endpoints\Indices\Template;
+namespace Elasticsearch\Legacy\v1_2_2\Endpoints\Indices\Template;
 
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch\Legacy\v1_2_2\Endpoints\AbstractEndpoint;
 
 abstract class AbstractTemplateEndpoint extends AbstractEndpoint
 {

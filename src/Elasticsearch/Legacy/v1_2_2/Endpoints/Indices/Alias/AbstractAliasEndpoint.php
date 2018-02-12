@@ -6,11 +6,11 @@
  */
 
 
-namespace Elasticsearch\Endpoints\Indices\Alias;
+namespace Elasticsearch\Legacy\v1_2_2\Endpoints\Indices\Alias;
 
 
-use Elasticsearch\Common\Exceptions\InvalidArgumentException;
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\InvalidArgumentException;
+use Elasticsearch\Legacy\v1_2_2\Endpoints\AbstractEndpoint;
 
 /**
  * Class AbstractNodeEndpoint

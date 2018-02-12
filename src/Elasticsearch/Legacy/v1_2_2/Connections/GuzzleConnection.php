@@ -5,20 +5,20 @@
  * Time: 10:39 AM
  */
 
-namespace Elasticsearch\Connections;
+namespace Elasticsearch\Legacy\v1_2_2\Connections;
 
 
-use Elasticsearch\Common\Exceptions\AlreadyExpiredException;
-use Elasticsearch\Common\Exceptions\BadRequest400Exception;
-use Elasticsearch\Common\Exceptions\Conflict409Exception;
-use Elasticsearch\Common\Exceptions\Forbidden403Exception;
-use Elasticsearch\Common\Exceptions\InvalidArgumentException;
-use Elasticsearch\Common\Exceptions\Missing404Exception;
-use Elasticsearch\Common\Exceptions\NoDocumentsToGetException;
-use Elasticsearch\Common\Exceptions\NoShardAvailableException;
-use Elasticsearch\Common\Exceptions\RoutingMissingException;
-use Elasticsearch\Common\Exceptions\ScriptLangNotSupportedException;
-use Elasticsearch\Common\Exceptions\TransportException;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\AlreadyExpiredException;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\BadRequest400Exception;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\Conflict409Exception;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\Forbidden403Exception;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\InvalidArgumentException;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\Missing404Exception;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\NoDocumentsToGetException;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\NoShardAvailableException;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\RoutingMissingException;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\ScriptLangNotSupportedException;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\TransportException;
 use \Guzzle\Http\Client;
 use Guzzle\Http\Exception\ClientErrorResponseException;
 use Guzzle\Http\Exception\CurlException;

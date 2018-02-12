@@ -5,11 +5,11 @@
  * Time: 6:03 PM
  */
 
-namespace Elasticsearch\Endpoints\Cluster\Nodes;
+namespace Elasticsearch\Legacy\v1_2_2\Endpoints\Cluster\Nodes;
 
 
-use Elasticsearch\Common\Exceptions\InvalidArgumentException;
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\InvalidArgumentException;
+use Elasticsearch\Legacy\v1_2_2\Endpoints\AbstractEndpoint;
 
 abstract class AbstractNodesEndpoint extends AbstractEndpoint
 {

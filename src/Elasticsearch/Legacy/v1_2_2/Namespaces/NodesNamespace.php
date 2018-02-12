@@ -5,7 +5,7 @@
  * Time: 3:21 PM
  */
 
-namespace Elasticsearch\Namespaces;
+namespace Elasticsearch\Legacy\v1_2_2\Namespaces;
 
 /**
  * Class NodesNamespace

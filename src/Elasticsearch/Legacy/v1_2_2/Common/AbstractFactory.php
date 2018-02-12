@@ -5,7 +5,7 @@
  * Time: 1:27 PM
  */
 
-namespace Elasticsearch\Common;
+namespace Elasticsearch\Legacy\v1_2_2\Common;
 
 
 use Pimple\Container as Pimple;

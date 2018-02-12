@@ -5,10 +5,10 @@
  * Time: 4:59 PM
  */
 
-namespace Elasticsearch\Endpoints\Indices;
+namespace Elasticsearch\Legacy\v1_2_2\Endpoints\Indices;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
-use Elasticsearch\Common\Exceptions;
+use Elasticsearch\Legacy\v1_2_2\Endpoints\AbstractEndpoint;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions;
 
 /**
  * Class Recovery

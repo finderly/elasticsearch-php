@@ -5,7 +5,7 @@
  * Time: 2:32 PM
  */
 
-namespace Elasticsearch\Common\Exceptions;
+namespace Elasticsearch\Legacy\v1_2_2\Common\Exceptions;
 
 /**
  * AlreadyExpiredException, thrown when a document has already expired

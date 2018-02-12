@@ -5,10 +5,10 @@
  * Time: 3:14 PM
  */
 
-namespace Elasticsearch\Common\Exceptions\Curl;
+namespace Elasticsearch\Legacy\v1_2_2\Common\Exceptions\Curl;
 
-use Elasticsearch\Common\Exceptions\ElasticsearchException;
-use Elasticsearch\Common\Exceptions\TransportException;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\ElasticsearchException;
+use Elasticsearch\Legacy\v1_2_2\Common\Exceptions\TransportException;
 
 /**
  * Class CouldNotConnectToHost
