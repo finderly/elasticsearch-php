@@ -29,7 +29,7 @@ class RerouteTest extends \PHPUnit_Framework_TestCase
     {
         $query['docs'] = '1';
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -47,7 +47,7 @@ class RerouteTest extends \PHPUnit_Framework_TestCase
 
     public function testValidReroute()
     {
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'POST',

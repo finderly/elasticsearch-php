@@ -29,7 +29,7 @@ class CountTest extends \PHPUnit_Framework_TestCase
 
         $uri = '/_count';
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -48,7 +48,7 @@ class CountTest extends \PHPUnit_Framework_TestCase
     {
         $uri = '/testIndex/_count';
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -69,7 +69,7 @@ class CountTest extends \PHPUnit_Framework_TestCase
 
         $uri = '/_all/testType/_count';
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -90,7 +90,7 @@ class CountTest extends \PHPUnit_Framework_TestCase
 
         $uri = '/testIndex/testType/_count';
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -109,7 +109,7 @@ class CountTest extends \PHPUnit_Framework_TestCase
 
     public function testValidCount()
     {
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',

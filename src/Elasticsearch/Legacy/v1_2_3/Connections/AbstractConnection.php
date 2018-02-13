@@ -295,9 +295,9 @@ abstract class AbstractConnection implements ConnectionInterface
      * @param $curlErrorNumber
      * @param $message
      *
-     * @throws \Elasticsearch\Common\Exceptions\TransportException
-     * @throws \Elasticsearch\Common\Exceptions\Curl\CouldNotResolveHostException
-     * @throws \Elasticsearch\Common\Exceptions\Curl\CouldNotConnectToHost
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\TransportException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\Curl\CouldNotResolveHostException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\Curl\CouldNotConnectToHost
      */
     protected function throwCurlException($curlErrorNumber, $message)
     {

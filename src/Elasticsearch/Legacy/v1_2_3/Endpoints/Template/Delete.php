@@ -24,7 +24,7 @@ class Delete extends AbstractEndpoint
 {
 
     /**
-     * @throws \Elasticsearch\Common\Exceptions\RuntimeException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\RuntimeException
      * @return string
      */
     protected function getURI()

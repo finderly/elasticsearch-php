@@ -25,7 +25,7 @@ class Suggest extends AbstractEndpoint
     /**
      * @param array $body
      *
-     * @throws \Elasticsearch\Common\Exceptions\InvalidArgumentException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\InvalidArgumentException
      * @return $this
      */
     public function setBody($body)
@@ -75,7 +75,7 @@ class Suggest extends AbstractEndpoint
 
     /**
      * @return array
-     * @throws \Elasticsearch\Common\Exceptions\RuntimeException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\RuntimeException
      */
     protected function getBody()
     {

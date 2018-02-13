@@ -35,7 +35,7 @@ class SnapshotNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->dicEndpoints;
 
-        /** @var \Elasticsearch\Endpoints\Snapshot\Create $endpoint */
+        /** @var \Elasticsearch\Legacy\v1_2_3\Endpoints\Snapshot\Create $endpoint */
         $endpoint = $endpointBuilder('Snapshot\Create');
         $endpoint->setRepository($repository)
                  ->setSnapshot($snapshot)
@@ -62,7 +62,7 @@ class SnapshotNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->dicEndpoints;
 
-        /** @var \Elasticsearch\Endpoints\Snapshot\Repository\Create $endpoint */
+        /** @var \Elasticsearch\Legacy\v1_2_3\Endpoints\Snapshot\Repository\Create $endpoint */
         $endpoint = $endpointBuilder('Snapshot\Repository\Create');
         $endpoint->setRepository($repository)
                  ->setBody($body)
@@ -87,7 +87,7 @@ class SnapshotNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->dicEndpoints;
 
-        /** @var \Elasticsearch\Endpoints\Snapshot\Delete $endpoint */
+        /** @var \Elasticsearch\Legacy\v1_2_3\Endpoints\Snapshot\Delete $endpoint */
         $endpoint = $endpointBuilder('Snapshot\Delete');
         $endpoint->setRepository($repository)
                  ->setSnapshot($snapshot)
@@ -112,7 +112,7 @@ class SnapshotNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->dicEndpoints;
 
-        /** @var \Elasticsearch\Endpoints\Snapshot\Repository\Delete $endpoint */
+        /** @var \Elasticsearch\Legacy\v1_2_3\Endpoints\Snapshot\Repository\Delete $endpoint */
         $endpoint = $endpointBuilder('Snapshot\Repository\Delete');
         $endpoint->setRepository($repository)
                  ->setParams($params);
@@ -138,7 +138,7 @@ class SnapshotNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->dicEndpoints;
 
-        /** @var \Elasticsearch\Endpoints\Snapshot\Get $endpoint */
+        /** @var \Elasticsearch\Legacy\v1_2_3\Endpoints\Snapshot\Get $endpoint */
         $endpoint = $endpointBuilder('Snapshot\Get');
         $endpoint->setRepository($repository)
                  ->setSnapshot($snapshot)
@@ -163,7 +163,7 @@ class SnapshotNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->dicEndpoints;
 
-        /** @var \Elasticsearch\Endpoints\Snapshot\Repository\Get $endpoint */
+        /** @var \Elasticsearch\Legacy\v1_2_3\Endpoints\Snapshot\Repository\Get $endpoint */
         $endpoint = $endpointBuilder('Snapshot\Repository\Get');
         $endpoint->setRepository($repository)
                  ->setParams($params);
@@ -189,7 +189,7 @@ class SnapshotNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->dicEndpoints;
 
-        /** @var \Elasticsearch\Endpoints\Snapshot\Restore $endpoint */
+        /** @var \Elasticsearch\Legacy\v1_2_3\Endpoints\Snapshot\Restore $endpoint */
         $endpoint = $endpointBuilder('Snapshot\Restore');
         $endpoint->setRepository($repository)
                  ->setSnapshot($snapshot)
@@ -214,7 +214,7 @@ class SnapshotNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->dicEndpoints;
 
-        /** @var \Elasticsearch\Endpoints\Snapshot\Status $endpoint */
+        /** @var \Elasticsearch\Legacy\v1_2_3\Endpoints\Snapshot\Status $endpoint */
         $endpoint = $endpointBuilder('Snapshot\Status');
         $endpoint->setRepository($repository)
                  ->setSnapshot($snapshot)

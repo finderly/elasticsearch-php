@@ -38,7 +38,7 @@ abstract class AbstractConnectionPool
     protected $selector;
 
 
-    /** @var \Elasticsearch\Connections\ConnectionFactory  */
+    /** @var \Elasticsearch\Legacy\v1_2_3\Connections\ConnectionFactory  */
     protected $connectionFactory;
 
     public function __construct($connections, SelectorInterface $selector, ConnectionFactory $factory, $connectionPoolParams)

@@ -55,8 +55,8 @@ class CurlMultiConnection extends AbstractConnection implements ConnectionInterf
      * @param \Psr\Log\LoggerInterface $log              logger object
      * @param \Psr\Log\LoggerInterface $trace            logger object (for curl traces)
      *
-     * @throws \Elasticsearch\Common\Exceptions\RuntimeException
-     * @throws \Elasticsearch\Common\Exceptions\InvalidArgumentException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\RuntimeException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\InvalidArgumentException
      * @return CurlMultiConnection
      */
     public function __construct($hostDetails, $connectionParams, LoggerInterface $log, LoggerInterface $trace)
@@ -109,8 +109,8 @@ class CurlMultiConnection extends AbstractConnection implements ConnectionInterf
      * @param null|string $body    Optional request body
      * @param array       $options Optional options
      *
-     * @throws \Elasticsearch\Common\Exceptions\TransportException
-     * @throws \Elasticsearch\Common\Exceptions\ServerErrorResponseException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\TransportException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\ServerErrorResponseException
      * @return array
      */
     public function performRequest($method, $uri, $params = null, $body = null, $options = array())
@@ -251,11 +251,11 @@ class CurlMultiConnection extends AbstractConnection implements ConnectionInterf
      * @param $uri
      * @param $response
      *
-     * @throws \Elasticsearch\Common\Exceptions\ScriptLangNotSupportedException
-     * @throws \Elasticsearch\Common\Exceptions\Forbidden403Exception
-     * @throws \Elasticsearch\Common\Exceptions\Conflict409Exception
-     * @throws \Elasticsearch\Common\Exceptions\Missing404Exception
-     * @throws \Elasticsearch\Common\Exceptions\AlreadyExpiredException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\ScriptLangNotSupportedException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\Forbidden403Exception
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\Conflict409Exception
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\Missing404Exception
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\AlreadyExpiredException
      */
     private function process4xxError($method, $uri, $request, $response)
     {
@@ -288,10 +288,10 @@ class CurlMultiConnection extends AbstractConnection implements ConnectionInterf
      * @param $uri
      * @param $response
      *
-     * @throws \Elasticsearch\Common\Exceptions\RoutingMissingException
-     * @throws \Elasticsearch\Common\Exceptions\NoShardAvailableException
-     * @throws \Elasticsearch\Common\Exceptions\NoDocumentsToGetException
-     * @throws \Elasticsearch\Common\Exceptions\ServerErrorResponseException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\RoutingMissingException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\NoShardAvailableException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\NoDocumentsToGetException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\ServerErrorResponseException
      */
     private function process5xxError($method, $uri, $request, $response)
     {

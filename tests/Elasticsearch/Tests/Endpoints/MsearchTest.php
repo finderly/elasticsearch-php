@@ -32,8 +32,8 @@ class MsearchTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetURIWithNoIndexTypeOrBody()
     {
-        $mockTransport = m::mock('\Elasticsearch\Transport');
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\ArrayToJSONSerializer');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\ArrayToJSONSerializer');
 
         $action = new Msearch($mockTransport, $mockSerializer);
         $action->performRequest();
@@ -45,7 +45,7 @@ class MsearchTest extends \PHPUnit_Framework_TestCase
 
         $uri = '/_msearch';
         $body = 'abc';
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -54,7 +54,7 @@ class MsearchTest extends \PHPUnit_Framework_TestCase
                                  $body
                              )
                          ->getMock();
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\ArrayToJSONSerializer');
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\ArrayToJSONSerializer');
         
         $action = new Msearch($mockTransport, $mockSerializer);
         $action->setBody($body)->performRequest();
@@ -65,7 +65,7 @@ class MsearchTest extends \PHPUnit_Framework_TestCase
     {
         $uri = '/testIndex/_msearch';
         $body = 'abc';
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -75,7 +75,7 @@ class MsearchTest extends \PHPUnit_Framework_TestCase
                              )
                          ->getMock();
 
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\ArrayToJSONSerializer');
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\ArrayToJSONSerializer');
         
         $action = new Msearch($mockTransport, $mockSerializer);
         $action->setBody($body)->setIndex('testIndex')
@@ -88,7 +88,7 @@ class MsearchTest extends \PHPUnit_Framework_TestCase
 
         $uri = '/_all/testType/_msearch';
         $body = 'abc';
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -98,7 +98,7 @@ class MsearchTest extends \PHPUnit_Framework_TestCase
                              )
                          ->getMock();
 
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\ArrayToJSONSerializer');
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\ArrayToJSONSerializer');
         
         $action = new Msearch($mockTransport, $mockSerializer);
         $action->setBody($body)->setType('testType')
@@ -111,7 +111,7 @@ class MsearchTest extends \PHPUnit_Framework_TestCase
 
         $uri = '/testIndex/testType/_msearch';
         $body = 'abc';
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -121,7 +121,7 @@ class MsearchTest extends \PHPUnit_Framework_TestCase
                              )
                          ->getMock();
 
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\ArrayToJSONSerializer');
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\ArrayToJSONSerializer');
         
         $action = new Msearch($mockTransport, $mockSerializer);
         $action->setBody($body)->setIndex('testIndex')
@@ -134,7 +134,7 @@ class MsearchTest extends \PHPUnit_Framework_TestCase
     public function testValidMsearch()
     {
         $body = 'abc';
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',
@@ -144,7 +144,7 @@ class MsearchTest extends \PHPUnit_Framework_TestCase
                              )
                          ->getMock();
 
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\ArrayToJSONSerializer');
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\ArrayToJSONSerializer');
         
         $action = new Msearch($mockTransport, $mockSerializer);
         $action->setBody($body)->setIndex('testIndex')
@@ -158,7 +158,7 @@ class MsearchTest extends \PHPUnit_Framework_TestCase
         $uri = '/_msearch';
         $body = array(array('query'=>array('match_all' => array())),array('query'=>array('match_all' => array())));
         $serializedBody = json_encode($body[0])."\n".json_encode($body[1])."\n";
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -168,7 +168,7 @@ class MsearchTest extends \PHPUnit_Framework_TestCase
                              )
                          ->getMock();
 
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\ArrayToJSONSerializer')
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\ArrayToJSONSerializer')
                           ->shouldReceive('serialize')
                           ->once()
                           ->with($body[0])

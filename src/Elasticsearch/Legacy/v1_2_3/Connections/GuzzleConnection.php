@@ -44,8 +44,8 @@ class GuzzleConnection extends AbstractConnection implements ConnectionInterface
      * @param \Psr\Log\LoggerInterface $log              logger object
      * @param \Psr\Log\LoggerInterface $trace            logger object (for curl traces)
      *
-     * @throws \Elasticsearch\Common\Exceptions\InvalidArgumentException
-     * @return \Elasticsearch\Connections\GuzzleConnection
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\InvalidArgumentException
+     * @return \Elasticsearch\Legacy\v1_2_3\Connections\GuzzleConnection
      */
     public function __construct($hostDetails, $connectionParams, LoggerInterface $log, LoggerInterface $trace)
     {
@@ -180,7 +180,7 @@ class GuzzleConnection extends AbstractConnection implements ConnectionInterface
      *
      * @param string  $body
      *
-     * @throws \Elasticsearch\Common\Exceptions\TransportException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\TransportException
      * @return \Guzzle\Http\Message\Response
      */
     private function sendRequest(Request $request, $body)
@@ -212,10 +212,10 @@ class GuzzleConnection extends AbstractConnection implements ConnectionInterface
      * @param ServerErrorResponseException $exception
      * @param string                       $body
      *
-     * @throws \Elasticsearch\Common\Exceptions\RoutingMissingException
-     * @throws \Elasticsearch\Common\Exceptions\NoShardAvailableException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\RoutingMissingException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\NoShardAvailableException
      * @throws \Guzzle\Http\Exception\ServerErrorResponseException
-     * @throws \Elasticsearch\Common\Exceptions\NoDocumentsToGetException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\NoDocumentsToGetException
      */
     private function process5xxError(Request $request, ServerErrorResponseException $exception, $body)
     {
@@ -235,7 +235,7 @@ class GuzzleConnection extends AbstractConnection implements ConnectionInterface
         } elseif ($statusCode === 500 && strpos($responseBody, 'NoShardAvailableActionException') !== false) {
             throw new NoShardAvailableException($responseBody, $statusCode, $exception);
         } else {
-            throw new \Elasticsearch\Common\Exceptions\ServerErrorResponseException($responseBody, $statusCode, $exception);
+            throw new \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\ServerErrorResponseException($responseBody, $statusCode, $exception);
         }
 
 

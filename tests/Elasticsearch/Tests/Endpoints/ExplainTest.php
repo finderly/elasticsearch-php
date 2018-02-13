@@ -31,7 +31,7 @@ class ExplainTest extends \PHPUnit_Framework_TestCase
     public function testNoIndexTypeOrID()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
         $action = new Explain($mockTransport);
         $action->performRequest();
@@ -44,7 +44,7 @@ class ExplainTest extends \PHPUnit_Framework_TestCase
     public function testNoIndex()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
         $action = new Explain($mockTransport);
         $action->setType('testType')->setID('testID')->performRequest();
@@ -57,7 +57,7 @@ class ExplainTest extends \PHPUnit_Framework_TestCase
     public function testNoType()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
         $action = new Explain($mockTransport);
         $action->setIndex('testIndex')->setID('testID')->performRequest();
@@ -70,7 +70,7 @@ class ExplainTest extends \PHPUnit_Framework_TestCase
     public function testNoID()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
         $action = new Explain($mockTransport);
         $action->setType('testType')->setIndex('testIndex')->performRequest();
@@ -79,7 +79,7 @@ class ExplainTest extends \PHPUnit_Framework_TestCase
 
     public function testValidExplain()
     {
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',

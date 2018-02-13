@@ -28,7 +28,7 @@ class BulkTest extends \PHPUnit_Framework_TestCase
     public function testSetBody()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()->once()
                          ->with(
                                  m::any(),
@@ -38,7 +38,7 @@ class BulkTest extends \PHPUnit_Framework_TestCase
                              )
                          ->getMock();
 
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\ArrayToJSONSerializer');
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\ArrayToJSONSerializer');
 
         $action = new Bulk($mockTransport, $mockSerializer);
         $action->setBody('bulk data')
@@ -52,7 +52,7 @@ class BulkTest extends \PHPUnit_Framework_TestCase
 
         $uri = '/_all/_bulk';
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -61,7 +61,7 @@ class BulkTest extends \PHPUnit_Framework_TestCase
                                  m::any()
                              )
                          ->getMock();
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\ArrayToJSONSerializer');
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\ArrayToJSONSerializer');
 
         $action = new Bulk($mockTransport, $mockSerializer);
         $action->performRequest();
@@ -72,7 +72,7 @@ class BulkTest extends \PHPUnit_Framework_TestCase
     {
         $uri = '/testIndex/_bulk';
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -81,7 +81,7 @@ class BulkTest extends \PHPUnit_Framework_TestCase
                                  m::any()
                              )
                          ->getMock();
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\ArrayToJSONSerializer');
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\ArrayToJSONSerializer');
 
         $action = new Bulk($mockTransport, $mockSerializer);
         $action->setIndex('testIndex')
@@ -94,7 +94,7 @@ class BulkTest extends \PHPUnit_Framework_TestCase
 
         $uri = '/_all/testType/_bulk';
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -103,7 +103,7 @@ class BulkTest extends \PHPUnit_Framework_TestCase
                                  m::any()
                              )
                          ->getMock();
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\ArrayToJSONSerializer');
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\ArrayToJSONSerializer');
 
         $action = new Bulk($mockTransport, $mockSerializer);
         $action->setType('testType')
@@ -116,7 +116,7 @@ class BulkTest extends \PHPUnit_Framework_TestCase
 
         $uri = '/testIndex/testType/_bulk';
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -125,7 +125,7 @@ class BulkTest extends \PHPUnit_Framework_TestCase
                                  m::any()
                              )
                          ->getMock();
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\ArrayToJSONSerializer');
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\ArrayToJSONSerializer');
 
         $action = new Bulk($mockTransport, $mockSerializer);
         $action->setIndex('testIndex')

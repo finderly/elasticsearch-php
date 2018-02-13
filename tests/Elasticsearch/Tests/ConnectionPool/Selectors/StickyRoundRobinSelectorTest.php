@@ -32,11 +32,11 @@ class StickyRoundRobinSelectorTest extends \PHPUnit_Framework_TestCase
         $roundRobin = new Elasticsearch\ConnectionPool\Selectors\StickyRoundRobinSelector();
 
         $mockConnections = array();
-        $mockConnections[] = m::mock('\Elasticsearch\Connections\GuzzleConnection')
+        $mockConnections[] = m::mock('\Elasticsearch\Legacy\v1_2_3\Connections\GuzzleConnection')
                              ->shouldReceive('isAlive')->times(16)->andReturn(true)->getMock();
 
         foreach (range(0,9) as $index) {
-            $mockConnections[] = m::mock('\Elasticsearch\Connections\GuzzleConnection');
+            $mockConnections[] = m::mock('\Elasticsearch\Legacy\v1_2_3\Connections\GuzzleConnection');
         }
 
 
@@ -53,14 +53,14 @@ class StickyRoundRobinSelectorTest extends \PHPUnit_Framework_TestCase
         $roundRobin = new Elasticsearch\ConnectionPool\Selectors\StickyRoundRobinSelector();
 
         $mockConnections = array();
-        $mockConnections[] = m::mock('\Elasticsearch\Connections\GuzzleConnection')
+        $mockConnections[] = m::mock('\Elasticsearch\Legacy\v1_2_3\Connections\GuzzleConnection')
                              ->shouldReceive('isAlive')->once()->andReturn(false)->getMock();
 
-        $mockConnections[] = m::mock('\Elasticsearch\Connections\GuzzleConnection')
+        $mockConnections[] = m::mock('\Elasticsearch\Legacy\v1_2_3\Connections\GuzzleConnection')
                              ->shouldReceive('isAlive')->times(15)->andReturn(true)->getMock();
 
         foreach (range(0,8) as $index) {
-            $mockConnections[] = m::mock('\Elasticsearch\Connections\GuzzleConnection');
+            $mockConnections[] = m::mock('\Elasticsearch\Legacy\v1_2_3\Connections\GuzzleConnection');
         }
 
 

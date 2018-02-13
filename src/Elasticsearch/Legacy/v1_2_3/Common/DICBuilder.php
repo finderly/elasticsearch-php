@@ -29,11 +29,11 @@ class DICBuilder
      * @var array
      */
     protected $paramDefaults = array(
-        'connectionClass'       => '\Elasticsearch\Connections\GuzzleConnection',
-        'connectionFactoryClass'=> '\Elasticsearch\Connections\ConnectionFactory',
-        'connectionPoolClass'   => '\Elasticsearch\ConnectionPool\StaticNoPingConnectionPool',
-        'selectorClass'         => '\Elasticsearch\ConnectionPool\Selectors\RoundRobinSelector',
-        'serializerClass'       => '\Elasticsearch\Serializers\SmartSerializer',
+        'connectionClass'       => '\Elasticsearch\Legacy\v1_2_3\Connections\GuzzleConnection',
+        'connectionFactoryClass'=> '\Elasticsearch\Legacy\v1_2_3\Connections\ConnectionFactory',
+        'connectionPoolClass'   => '\Elasticsearch\Legacy\v1_2_3\ConnectionPool\StaticNoPingConnectionPool',
+        'selectorClass'         => '\Elasticsearch\Legacy\v1_2_3\ConnectionPool\Selectors\RoundRobinSelector',
+        'serializerClass'       => '\Elasticsearch\Legacy\v1_2_3\Serializers\SmartSerializer',
         'sniffOnStart'          => false,
         'connectionParams'      => array(),
         'logging'               => false,
@@ -298,12 +298,12 @@ class DICBuilder
             $connectionParams = $dicParams['connectionParams'];
 
             // Multihandle connections need a "static", shared curl multihandle.
-            if ($dicParams['connectionClass'] === '\Elasticsearch\Connections\CurlMultiConnection') {
+            if ($dicParams['connectionClass'] === '\Elasticsearch\Legacy\v1_2_3\Connections\CurlMultiConnection') {
                 $connectionParams = array_merge(
                     $connectionParams,
                     array('curlMultiHandle' => $dicParams['curlMultiHandle'])
                 );
-            } elseif ($dicParams['connectionClass'] === '\Elasticsearch\Connections\GuzzleConnection') {
+            } elseif ($dicParams['connectionClass'] === '\Elasticsearch\Legacy\v1_2_3\Connections\GuzzleConnection') {
                 $connectionParams = array_merge(
                     $connectionParams,
                     array('guzzleClient' => $dicParams['guzzleClient'])
@@ -348,7 +348,7 @@ class DICBuilder
     {
         $dicParams = $this->dic;
         $this->dic['endpoint'] = $this->dic->protect(function ($class) use ($dicParams) {
-            $fullPath = '\\Elasticsearch\\Endpoints\\'.$class;
+            $fullPath = '\\Elasticsearch\Legacy\v1_2_3\\Endpoints\\'.$class;
             if ($class === 'Bulk' || $class === 'Msearch' || $class === 'MPercolate') {
                 return new $fullPath($dicParams['transport'], $dicParams['serializer']);
             } else {

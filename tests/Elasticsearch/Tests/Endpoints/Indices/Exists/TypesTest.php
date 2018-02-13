@@ -31,7 +31,7 @@ class TypesTest extends \PHPUnit_Framework_TestCase
     public function testNoIndexNoType()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
         $index = new Types($mockTransport);
         $index->performRequest();
@@ -44,7 +44,7 @@ class TypesTest extends \PHPUnit_Framework_TestCase
     public function testNoIndex()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
         $index = new Types($mockTransport);
         $index->setType('testType')->performRequest();
@@ -57,7 +57,7 @@ class TypesTest extends \PHPUnit_Framework_TestCase
     public function testNoType()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
         $index = new Types($mockTransport);
         $index->setIndex('testIndex')->performRequest();
@@ -67,7 +67,7 @@ class TypesTest extends \PHPUnit_Framework_TestCase
 
     public function testValidTypesExists()
     {
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'HEAD',

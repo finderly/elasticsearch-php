@@ -31,7 +31,7 @@ class SuggestTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetURIWithNoIndexOrBody()
     {
-        $mockTransport = m::mock('\Elasticsearch\Transport');;
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');;
 
         $action = new Suggest($mockTransport);
         $action->performRequest();
@@ -43,7 +43,7 @@ class SuggestTest extends \PHPUnit_Framework_TestCase
 
         $uri = '/_suggest';
         $body = 'abc';
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -61,7 +61,7 @@ class SuggestTest extends \PHPUnit_Framework_TestCase
     public function testValidSuggest()
     {
         $body = 'abc';
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',

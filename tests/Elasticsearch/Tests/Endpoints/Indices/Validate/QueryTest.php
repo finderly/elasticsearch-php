@@ -26,7 +26,7 @@ class QueryTest extends \PHPUnit_Framework_TestCase
 
     public function testValidQueryWithNoIndexNoType()
     {
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',
@@ -44,7 +44,7 @@ class QueryTest extends \PHPUnit_Framework_TestCase
     public function testValidQueryWithIndex()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',
@@ -63,7 +63,7 @@ class QueryTest extends \PHPUnit_Framework_TestCase
     public function testValidQueryWithType()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',
@@ -82,7 +82,7 @@ class QueryTest extends \PHPUnit_Framework_TestCase
     public function testValidQueryWithIndexAndType()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',
@@ -103,7 +103,7 @@ class QueryTest extends \PHPUnit_Framework_TestCase
 
         $body = array('field' => 'value');
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',

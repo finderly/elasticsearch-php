@@ -19,7 +19,7 @@ class RoundRobinSelectorTest extends \PHPUnit_Framework_TestCase
     /**
      * Add Ten connections, select 15 to verify round robin
      *
-     * @covers \Elasticsearch\ConnectionPool\Selectors\RoundRobinSelector::select
+     * @covers \Elasticsearch\Legacy\v1_2_3\ConnectionPool\Selectors\RoundRobinSelector::select
      *
      * @return void
      */
@@ -29,7 +29,7 @@ class RoundRobinSelectorTest extends \PHPUnit_Framework_TestCase
 
         $mockConnections = array();
         foreach (range(0,10) as $index) {
-            $mockConnections[$index] = $this->getMockBuilder('\Elasticsearch\Connections\CurlMultiConnection')
+            $mockConnections[$index] = $this->getMockBuilder('\Elasticsearch\Legacy\v1_2_3\Connections\CurlMultiConnection')
                 ->disableOriginalConstructor()
                 ->getMock();
         }
@@ -48,7 +48,7 @@ class RoundRobinSelectorTest extends \PHPUnit_Framework_TestCase
      * Add Ten connections, select five, remove thre, test another 10 to check
      * that the round-robining works after removing connections
      *
-     * @covers \Elasticsearch\ConnectionPool\Selectors\RoundRobinSelector::select
+     * @covers \Elasticsearch\Legacy\v1_2_3\ConnectionPool\Selectors\RoundRobinSelector::select
      *
      * @return void
      */
@@ -58,7 +58,7 @@ class RoundRobinSelectorTest extends \PHPUnit_Framework_TestCase
 
         $mockConnections = array();
         foreach (range(0,10) as $index) {
-            $mockConnections[$index] = $this->getMockBuilder('\Elasticsearch\Connections\CurlMultiConnection')
+            $mockConnections[$index] = $this->getMockBuilder('\Elasticsearch\Legacy\v1_2_3\Connections\CurlMultiConnection')
                 ->disableOriginalConstructor()
                 ->getMock();
         }

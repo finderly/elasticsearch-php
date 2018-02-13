@@ -31,7 +31,7 @@ class PutTest extends \PHPUnit_Framework_TestCase
     public function testSetArrayBody()
     {
         $body = array('field' => 'value');
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'PUT',
@@ -51,7 +51,7 @@ class PutTest extends \PHPUnit_Framework_TestCase
      */
     public function testNoBody()
     {
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
         $action = new Put($mockTransport);
         $action->performRequest();
     }
@@ -60,7 +60,7 @@ class PutTest extends \PHPUnit_Framework_TestCase
     public function testNoIndex()
     {
         $body = array('field' => 'value');
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'PUT',
@@ -81,7 +81,7 @@ class PutTest extends \PHPUnit_Framework_TestCase
     public function testNoName()
     {
         $body = array('field' => 'value');
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
         $action = new Put($mockTransport);
         $action->setBody($body)->setIndex('testIndex')
@@ -93,7 +93,7 @@ class PutTest extends \PHPUnit_Framework_TestCase
     public function testValidPutWithIndexBodyAndName()
     {
         $body = array('field' => 'value');
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'PUT',

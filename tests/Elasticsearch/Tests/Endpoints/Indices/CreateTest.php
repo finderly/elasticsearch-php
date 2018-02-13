@@ -29,7 +29,7 @@ class CreateTest extends \PHPUnit_Framework_TestCase
     {
         $body = array('field' => 'value');
 
-        $mockTransport = m::mock('\Elasticsearch\Transport');;
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');;
 
         $action = new Create($mockTransport);
         $action->setBody($body);;
@@ -42,7 +42,7 @@ class CreateTest extends \PHPUnit_Framework_TestCase
     public function testNoIndex()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
         $action = new Create($mockTransport);
         $action->performRequest();
@@ -52,7 +52,7 @@ class CreateTest extends \PHPUnit_Framework_TestCase
     public function testValidCreateNoBody()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'PUT',
@@ -73,7 +73,7 @@ class CreateTest extends \PHPUnit_Framework_TestCase
 
         $body = array('settings' => 'values');
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'PUT',
@@ -98,7 +98,7 @@ class CreateTest extends \PHPUnit_Framework_TestCase
             'mappings' => 'values'
         );
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'POST',

@@ -31,7 +31,7 @@ class GetTest extends \PHPUnit_Framework_TestCase
     public function testNoIndexTypeOrID()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
         $index = new Get($mockTransport);
         $index->performRequest();
@@ -44,7 +44,7 @@ class GetTest extends \PHPUnit_Framework_TestCase
     public function testNoIndex()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
         $index = new Get($mockTransport);
         $index->setType('testType')->performRequest();
@@ -57,7 +57,7 @@ class GetTest extends \PHPUnit_Framework_TestCase
     public function testNoType()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
         $index = new Get($mockTransport);
         $index->setIndex('testIndex')->performRequest();
@@ -70,7 +70,7 @@ class GetTest extends \PHPUnit_Framework_TestCase
     public function testNoID()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
         $index = new Get($mockTransport);
         $index->setIndex('testIndex')->setType('testType')->performRequest();
@@ -80,7 +80,7 @@ class GetTest extends \PHPUnit_Framework_TestCase
     public function testValidGet()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',
@@ -102,7 +102,7 @@ class GetTest extends \PHPUnit_Framework_TestCase
 
     public function testValidIndexWithSourceOnly()
     {
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',
@@ -125,7 +125,7 @@ class GetTest extends \PHPUnit_Framework_TestCase
 
     public function testValidIndexWithExistenceOnly()
     {
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'HEAD',

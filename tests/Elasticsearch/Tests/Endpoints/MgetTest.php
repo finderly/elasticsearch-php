@@ -29,7 +29,7 @@ class MgetTest extends \PHPUnit_Framework_TestCase
     {
         $body['docs'] = '1';
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -51,7 +51,7 @@ class MgetTest extends \PHPUnit_Framework_TestCase
 
         $uri = '/_mget';
         $body['docs'] = '1';
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -70,7 +70,7 @@ class MgetTest extends \PHPUnit_Framework_TestCase
     {
         $uri = '/testIndex/_mget';
         $body['docs'] = '1';
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -91,7 +91,7 @@ class MgetTest extends \PHPUnit_Framework_TestCase
 
         $uri = '/_all/testType/_mget';
         $body['docs'] = '1';
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -112,7 +112,7 @@ class MgetTest extends \PHPUnit_Framework_TestCase
 
         $uri = '/testIndex/testType/_mget';
         $body['docs'] = '1';
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),

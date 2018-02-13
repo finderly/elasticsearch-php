@@ -35,7 +35,7 @@ abstract class AbstractEndpoint
     /** @var  array */
     protected $body = null;
 
-    /** @var \Elasticsearch\Transport  */
+    /** @var \Elasticsearch\Legacy\v1_2_3\Transport  */
     private $transport = null;
 
     /** @var array  */
@@ -231,7 +231,7 @@ abstract class AbstractEndpoint
     /**
      * @param array $params
      *
-     * @throws \Elasticsearch\Common\Exceptions\UnexpectedValueException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\UnexpectedValueException
      */
     private function checkUserParams($params)
     {
@@ -247,7 +247,7 @@ abstract class AbstractEndpoint
      *
      * @param array $params    Assoc array of parameters
      *
-     * @throws \Elasticsearch\Common\Exceptions\UnexpectedValueException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\UnexpectedValueException
      *
      */
     private function ifParamsInvalidThrowException($params)

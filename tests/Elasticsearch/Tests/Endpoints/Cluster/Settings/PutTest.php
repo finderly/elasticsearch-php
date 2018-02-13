@@ -29,7 +29,7 @@ class PutTest extends \PHPUnit_Framework_TestCase
     {
         $query['docs'] = '1';
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -49,7 +49,7 @@ class PutTest extends \PHPUnit_Framework_TestCase
     {
         $Puttings = array('field' => 'value');
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'PUT',
@@ -67,7 +67,7 @@ class PutTest extends \PHPUnit_Framework_TestCase
 
     public function testValidPutWithoutBody()
     {
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'PUT',

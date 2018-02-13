@@ -22,7 +22,7 @@ class Index extends AbstractEndpoint
     /**
      * @param array $body
      *
-     * @throws \Elasticsearch\Common\Exceptions\InvalidArgumentException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\InvalidArgumentException
      * @return $this
      */
     public function setBody($body)
@@ -48,7 +48,7 @@ class Index extends AbstractEndpoint
 
 
     /**
-     * @throws \Elasticsearch\Common\Exceptions\RuntimeException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\RuntimeException
      * @return string
      */
     protected function getURI()
@@ -118,7 +118,7 @@ class Index extends AbstractEndpoint
 
     /**
      * @return array
-     * @throws \Elasticsearch\Common\Exceptions\RuntimeException
+     * @throws \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\RuntimeException
      */
     protected function getBody()
     {

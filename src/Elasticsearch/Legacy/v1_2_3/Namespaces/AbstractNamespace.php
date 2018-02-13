@@ -21,7 +21,7 @@ use Elasticsearch\Legacy\v1_2_3\Transport;
  */
 abstract class AbstractNamespace
 {
-    /** @var \Elasticsearch\Transport  */
+    /** @var \Elasticsearch\Legacy\v1_2_3\Transport  */
     protected $transport;
 
     /** @var  callback */

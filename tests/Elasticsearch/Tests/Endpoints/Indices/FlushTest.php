@@ -25,7 +25,7 @@ class FlushTest extends \PHPUnit_Framework_TestCase
 
     public function testValidFlushWithNoIndex()
     {
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',
@@ -43,7 +43,7 @@ class FlushTest extends \PHPUnit_Framework_TestCase
     public function testValidFlushWithIndex()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',

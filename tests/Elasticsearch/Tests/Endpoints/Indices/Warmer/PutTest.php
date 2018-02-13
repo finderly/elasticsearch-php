@@ -29,7 +29,7 @@ class PutTest extends \PHPUnit_Framework_TestCase
     public function testPutNoIndex()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'PUT',
@@ -50,7 +50,7 @@ class PutTest extends \PHPUnit_Framework_TestCase
     public function testPutNoBody()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
         $action = new Put($mockTransport);
         $action->setIndex('testIndex')->setName('testName')->performRequest();
@@ -63,7 +63,7 @@ class PutTest extends \PHPUnit_Framework_TestCase
     public function testPutNoName()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
         $action = new Put($mockTransport);
         $action->setIndex('testIndex')->setBody(array())->performRequest();
@@ -76,7 +76,7 @@ class PutTest extends \PHPUnit_Framework_TestCase
     {
         $body = array('field' => 'value');
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'PUT',
@@ -95,7 +95,7 @@ class PutTest extends \PHPUnit_Framework_TestCase
     {
         $body = array('field' => 'value');
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'PUT',

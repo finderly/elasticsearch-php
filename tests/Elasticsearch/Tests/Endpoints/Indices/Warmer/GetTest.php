@@ -28,7 +28,7 @@ class GetTest extends \PHPUnit_Framework_TestCase
     public function testGetNoIndex()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',
@@ -46,7 +46,7 @@ class GetTest extends \PHPUnit_Framework_TestCase
     public function testGetWithIndex()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',
@@ -68,7 +68,7 @@ class GetTest extends \PHPUnit_Framework_TestCase
     public function testGetWithIndexAndType()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
         $action = new Get($mockTransport);
         $action->setIndex('testIndex')->setType('testType')->performRequest();
@@ -78,7 +78,7 @@ class GetTest extends \PHPUnit_Framework_TestCase
     public function testGetWithIndexAndName()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',
@@ -96,7 +96,7 @@ class GetTest extends \PHPUnit_Framework_TestCase
     public function testGetWithIndexTypeAndName()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',

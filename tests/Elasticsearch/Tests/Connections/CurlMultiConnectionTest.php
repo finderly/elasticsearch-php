@@ -30,10 +30,10 @@ class CurlMultiConnectionTest extends \PHPUnit_Framework_TestCase
     /**
      * Test no multihandle
      *
-     * @expectedException \Elasticsearch\Common\Exceptions\InvalidArgumentException
+     * @expectedException \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\InvalidArgumentException
      * @expectedExceptionMessage curlMultiHandle must be set in connectionParams
      *
-     * @covers \Elasticsearch\Connections\CurlMultiConnection::performRequest
+     * @covers \Elasticsearch\Legacy\v1_2_3\Connections\CurlMultiConnection::performRequest
      * @return void
      */
     public function testNoMultihandle()
@@ -52,9 +52,9 @@ class CurlMultiConnectionTest extends \PHPUnit_Framework_TestCase
     /**
      * Test bad host name
      *
-     * @expectedException \Elasticsearch\Common\Exceptions\TransportException
+     * @expectedException \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\TransportException
      *
-     * @covers \Elasticsearch\Connections\CurlMultiConnection::performRequest
+     * @covers \Elasticsearch\Legacy\v1_2_3\Connections\CurlMultiConnection::performRequest
      * @return void
      */
     public function testBadHost()
@@ -74,9 +74,9 @@ class CurlMultiConnectionTest extends \PHPUnit_Framework_TestCase
     /**
      * Test bad port number
      *
-     * @expectedException \Elasticsearch\Common\Exceptions\TransportException
+     * @expectedException \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\TransportException
      *
-     * @covers \Elasticsearch\Connections\CurlMultiConnection::performRequest
+     * @covers \Elasticsearch\Legacy\v1_2_3\Connections\CurlMultiConnection::performRequest
      * @return void
      */
     public function testBadPort()

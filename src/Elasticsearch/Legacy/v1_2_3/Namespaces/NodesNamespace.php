@@ -51,7 +51,7 @@ class NodesNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->dicEndpoints;
 
-        /** @var \Elasticsearch\Endpoints\Cluster\Nodes\Stats $endpoint */
+        /** @var \Elasticsearch\Legacy\v1_2_3\Endpoints\Cluster\Nodes\Stats $endpoint */
         $endpoint = $endpointBuilder('Cluster\Nodes\Stats');
         $endpoint->setNodeID($nodeID)
                  ->setMetric($metric)
@@ -80,7 +80,7 @@ class NodesNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->dicEndpoints;
 
-        /** @var \Elasticsearch\Endpoints\Cluster\Nodes\Info $endpoint */
+        /** @var \Elasticsearch\Legacy\v1_2_3\Endpoints\Cluster\Nodes\Info $endpoint */
         $endpoint = $endpointBuilder('Cluster\Nodes\Info');
         $endpoint->setNodeID($nodeID)->setMetric($metric);
         $endpoint->setParams($params);
@@ -107,7 +107,7 @@ class NodesNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->dicEndpoints;
 
-        /** @var \Elasticsearch\Endpoints\Cluster\Nodes\HotThreads $endpoint */
+        /** @var \Elasticsearch\Legacy\v1_2_3\Endpoints\Cluster\Nodes\HotThreads $endpoint */
         $endpoint = $endpointBuilder('Cluster\Nodes\HotThreads');
         $endpoint->setNodeID($nodeID);
         $endpoint->setParams($params);
@@ -132,7 +132,7 @@ class NodesNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->dicEndpoints;
 
-        /** @var \Elasticsearch\Endpoints\Cluster\Nodes\Shutdown $endpoint */
+        /** @var \Elasticsearch\Legacy\v1_2_3\Endpoints\Cluster\Nodes\Shutdown $endpoint */
         $endpoint = $endpointBuilder('Cluster\Nodes\Shutdown');
         $endpoint->setNodeID($nodeID);
         $endpoint->setParams($params);

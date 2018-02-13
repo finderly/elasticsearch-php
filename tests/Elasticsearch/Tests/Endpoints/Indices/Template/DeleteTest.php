@@ -30,7 +30,7 @@ class DeleteTest extends \PHPUnit_Framework_TestCase
     public function testNoName()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
         $action = new Delete($mockTransport);
         $action->performRequest();
@@ -40,7 +40,7 @@ class DeleteTest extends \PHPUnit_Framework_TestCase
     public function testValidDelete()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'DELETE',

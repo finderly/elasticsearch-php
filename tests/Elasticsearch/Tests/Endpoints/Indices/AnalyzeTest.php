@@ -29,7 +29,7 @@ class AnalyzeTest extends \PHPUnit_Framework_TestCase
     {
         $body = 'abc';
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  m::any(),
@@ -50,7 +50,7 @@ class AnalyzeTest extends \PHPUnit_Framework_TestCase
 
         $uri = '/_analyze';
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',
@@ -69,7 +69,7 @@ class AnalyzeTest extends \PHPUnit_Framework_TestCase
     {
         $uri = '/testIndex/_analyze';
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',

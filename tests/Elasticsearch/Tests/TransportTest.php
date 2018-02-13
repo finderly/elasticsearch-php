@@ -27,10 +27,10 @@ class TransportTest extends \PHPUnit_Framework_TestCase
     /**
      * Test string constructors
      *
-     * @expectedException \Elasticsearch\Common\Exceptions\InvalidArgumentException
+     * @expectedException \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\InvalidArgumentException
      * @expectedExceptionMessage Hosts parameter must be an array
      *
-     * @covers \Elasticsearch\Transport::__construct
+     * @covers \Elasticsearch\Legacy\v1_2_3\Transport::__construct
      * @return void
      */
     public function testStringConstructor()
@@ -53,16 +53,16 @@ class TransportTest extends \PHPUnit_Framework_TestCase
 
         $hosts = array(array('host' => 'localhost'));
 
-        $mockConnectionPool = m::mock('\Elasticsearch\ConnectionPool\StaticConnectionPool')
+        $mockConnectionPool = m::mock('\Elasticsearch\Legacy\v1_2_3\ConnectionPool\StaticConnectionPool')
                         ->shouldReceive('scheduleCheck')->once()->getMock();
 
         $mockConnectionPoolFxn = function($connections) use ($mockConnectionPool) {
             return $mockConnectionPool;
         };
 
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\SerializerInterface');
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\SerializerInterface');
 
-        $mockConnection = m::mock('\Elasticsearch\Connections\ConnectionInterface');
+        $mockConnection = m::mock('\Elasticsearch\Legacy\v1_2_3\Connections\ConnectionInterface');
         $mockConnectionFxn = function($host, $port = null) use ($mockConnection) {
             return $mockConnection;
         };
@@ -88,16 +88,16 @@ class TransportTest extends \PHPUnit_Framework_TestCase
 
         $hosts = array(array('host' => 'localhost'));
 
-        $mockConnectionPool = m::mock('\Elasticsearch\ConnectionPool\StaticConnectionPool')
+        $mockConnectionPool = m::mock('\Elasticsearch\Legacy\v1_2_3\ConnectionPool\StaticConnectionPool')
                               ->shouldReceive('scheduleCheck')->once()->getMock();
 
         $mockConnectionPoolFxn = function($connections) use ($mockConnectionPool) {
             return $mockConnectionPool;
         };
 
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\SerializerInterface');
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\SerializerInterface');
 
-        $mockConnection = m::mock('\Elasticsearch\Connections\ConnectionInterface');
+        $mockConnection = m::mock('\Elasticsearch\Legacy\v1_2_3\Connections\ConnectionInterface');
         $mockConnectionFxn = function($host, $port = null) use ($mockConnection) {
             return $mockConnection;
         };
@@ -122,15 +122,15 @@ class TransportTest extends \PHPUnit_Framework_TestCase
 
         $hosts = array(array('host' => 'localhost'));
 
-        $mockConnectionPool = m::mock('\Elasticsearch\ConnectionPool\StaticConnectionPool')
+        $mockConnectionPool = m::mock('\Elasticsearch\Legacy\v1_2_3\ConnectionPool\StaticConnectionPool')
                               ->shouldReceive('scheduleCheck')->never()->getMock();
         $mockConnectionPoolFxn = function($connections) use ($mockConnectionPool) {
             return $mockConnectionPool;
         };
 
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\SerializerInterface');
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\SerializerInterface');
 
-        $mockConnection = m::mock('\Elasticsearch\Connections\ConnectionInterface');
+        $mockConnection = m::mock('\Elasticsearch\Legacy\v1_2_3\Connections\ConnectionInterface');
         $mockConnectionFxn = function($host, $port=null) use ($mockConnection) {
             return $mockConnection;
         };
@@ -156,15 +156,15 @@ class TransportTest extends \PHPUnit_Framework_TestCase
 
         $hosts = array(array('host' => 'localhost'), array('host' => 'localhost', 'port' => 9200));
 
-        $mockConnectionPool = m::mock('\Elasticsearch\ConnectionPool\StaticConnectionPool')
+        $mockConnectionPool = m::mock('\Elasticsearch\Legacy\v1_2_3\ConnectionPool\StaticConnectionPool')
                               ->shouldReceive('scheduleCheck')->never()->getMock();
         $mockConnectionPoolFxn = function($connections) use ($mockConnectionPool) {
             return $mockConnectionPool;
         };
 
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\SerializerInterface');
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\SerializerInterface');
 
-        $mockConnection = m::mock('\Elasticsearch\Connections\ConnectionInterface');
+        $mockConnection = m::mock('\Elasticsearch\Legacy\v1_2_3\Connections\ConnectionInterface');
         $mockConnectionFxn = function($host, $port=null) use ($mockConnection) {
             return $mockConnection;
         };
@@ -199,7 +199,7 @@ class TransportTest extends \PHPUnit_Framework_TestCase
             'info'     => array()
         );
 
-        $mockConnection = m::mock('\Elasticsearch\Connections\AbstractConnection')
+        $mockConnection = m::mock('\Elasticsearch\Legacy\v1_2_3\Connections\AbstractConnection')
                           ->shouldReceive('performRequest')->once()->with($method, $uri, $params, $body)->andReturn($response)->getMock()
                           ->shouldReceive('markAlive')->once()->getMock();
 
@@ -207,14 +207,14 @@ class TransportTest extends \PHPUnit_Framework_TestCase
             return $mockConnection;
         };
 
-        $mockConnectionPool = m::mock('\Elasticsearch\ConnectionPool\StaticConnectionPool')
+        $mockConnectionPool = m::mock('\Elasticsearch\Legacy\v1_2_3\ConnectionPool\StaticConnectionPool')
                               ->shouldReceive('scheduleCheck')->never()->getMock()
                               ->shouldReceive('nextConnection')->andReturn($mockConnection)->getMock();
         $mockConnectionPoolFxn = function($connections) use ($mockConnectionPool) {
             return $mockConnectionPool;
         };
 
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\SerializerInterface')
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\SerializerInterface')
                           ->shouldReceive('deserialize')->with($response['text'], array())->andReturn('out')->getMock();
 
 
@@ -261,7 +261,7 @@ class TransportTest extends \PHPUnit_Framework_TestCase
         $serializedBody = 'out_serialized';
 
 
-        $mockConnection = m::mock('\Elasticsearch\Connections\AbstractConnection')
+        $mockConnection = m::mock('\Elasticsearch\Legacy\v1_2_3\Connections\AbstractConnection')
                           ->shouldReceive('performRequest')->once()->with($method, $uri, $params, $serializedBody)->andReturn($response)->getMock()
                           ->shouldReceive('markAlive')->once()->getMock();
 
@@ -269,14 +269,14 @@ class TransportTest extends \PHPUnit_Framework_TestCase
             return $mockConnection;
         };
 
-        $mockConnectionPool = m::mock('\Elasticsearch\ConnectionPool\StaticConnectionPool')
+        $mockConnectionPool = m::mock('\Elasticsearch\Legacy\v1_2_3\ConnectionPool\StaticConnectionPool')
                               ->shouldReceive('scheduleCheck')->never()->getMock()
                               ->shouldReceive('nextConnection')->andReturn($mockConnection)->getMock();
         $mockConnectionPoolFxn = function($connections) use ($mockConnectionPool) {
             return $mockConnectionPool;
         };
 
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\SerializerInterface')
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\SerializerInterface')
                           ->shouldReceive('serialize')->with($body)->andReturn($serializedBody)->getMock()
                           ->shouldReceive('deserialize')->with($response['text'], array())->andReturn('out_deserialize')->getMock();
 
@@ -321,7 +321,7 @@ class TransportTest extends \PHPUnit_Framework_TestCase
             'info'     => array()
         );
 
-        $mockConnection = m::mock('\Elasticsearch\Connections\AbstractConnection')
+        $mockConnection = m::mock('\Elasticsearch\Legacy\v1_2_3\Connections\AbstractConnection')
                           ->shouldReceive('performRequest')->once()->with($method, $uri, $params, $body)->andThrow(new Elasticsearch\Common\Exceptions\Curl\OperationTimeoutException())->getMock()
                           ->shouldReceive('performRequest')->once()->with($method, $uri, $params, $body)->andReturn($response)->getMock()
                           ->shouldReceive('markAlive')->once()->getMock();
@@ -330,14 +330,14 @@ class TransportTest extends \PHPUnit_Framework_TestCase
             return $mockConnection;
         };
 
-        $mockConnectionPool = m::mock('\Elasticsearch\ConnectionPool\StaticConnectionPool')
+        $mockConnectionPool = m::mock('\Elasticsearch\Legacy\v1_2_3\ConnectionPool\StaticConnectionPool')
                               ->shouldReceive('scheduleCheck')->once()->getMock()
                               ->shouldReceive('nextConnection')->twice()->andReturn($mockConnection)->getMock();
         $mockConnectionPoolFxn = function($connections) use ($mockConnectionPool) {
             return $mockConnectionPool;
         };
 
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\SerializerInterface')
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\SerializerInterface')
                           ->shouldReceive('deserialize')->with($response['text'], array())->andReturn('out')->getMock();
 
 
@@ -366,7 +366,7 @@ class TransportTest extends \PHPUnit_Framework_TestCase
 
 
     /**
-     * @expectedException \Elasticsearch\Common\Exceptions\NoNodesAvailableException
+     * @expectedException \Elasticsearch\Legacy\v1_2_3\Common\Exceptions\NoNodesAvailableException
      */
     public function testPerformRequestNoNodesAvailable()
     {
@@ -385,19 +385,19 @@ class TransportTest extends \PHPUnit_Framework_TestCase
             'info'     => array()
         );
 
-        $mockConnection = m::mock('\Elasticsearch\Connections\AbstractConnection');
+        $mockConnection = m::mock('\Elasticsearch\Legacy\v1_2_3\Connections\AbstractConnection');
 
         $mockConnectionFxn = function($host, $port=null) use ($mockConnection) {
             return $mockConnection;
         };
 
-        $mockConnectionPool = m::mock('\Elasticsearch\ConnectionPool\StaticConnectionPool')
+        $mockConnectionPool = m::mock('\Elasticsearch\Legacy\v1_2_3\ConnectionPool\StaticConnectionPool')
                               ->shouldReceive('nextConnection')->once()->andThrow(new Elasticsearch\Common\Exceptions\NoNodesAvailableException())->getMock();
         $mockConnectionPoolFxn = function($connections) use ($mockConnectionPool) {
             return $mockConnectionPool;
         };
 
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\SerializerInterface');
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\SerializerInterface');
 
         // Eww...
         $pimple = m::mock('Pimple')
@@ -432,7 +432,7 @@ class TransportTest extends \PHPUnit_Framework_TestCase
             'info'     => array()
         );
 
-        $mockConnection = m::mock('\Elasticsearch\Connections\AbstractConnection')
+        $mockConnection = m::mock('\Elasticsearch\Legacy\v1_2_3\Connections\AbstractConnection')
                           ->shouldReceive('performRequest')->once()->with($method, $uri, $params, $body)->andThrow(new Elasticsearch\Common\Exceptions\TransportException())->getMock()
                           ->shouldReceive('performRequest')->once()->with($method, $uri, $params, $body)->andReturn($response)->getMock()
                           ->shouldReceive('markDead')->once()->getMock()
@@ -442,14 +442,14 @@ class TransportTest extends \PHPUnit_Framework_TestCase
             return $mockConnection;
         };
 
-        $mockConnectionPool = m::mock('\Elasticsearch\ConnectionPool\StaticConnectionPool')
+        $mockConnectionPool = m::mock('\Elasticsearch\Legacy\v1_2_3\ConnectionPool\StaticConnectionPool')
                               ->shouldReceive('scheduleCheck')->once()->getMock()
                               ->shouldReceive('nextConnection')->twice()->andReturn($mockConnection)->getMock();
         $mockConnectionPoolFxn = function($connections) use ($mockConnectionPool) {
             return $mockConnectionPool;
         };
 
-        $mockSerializer = m::mock('\Elasticsearch\Serializers\SerializerInterface')
+        $mockSerializer = m::mock('\Elasticsearch\Legacy\v1_2_3\Serializers\SerializerInterface')
                           ->shouldReceive('deserialize')->with($response['text'], array())->andReturn('out')->getMock();
 
 

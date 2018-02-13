@@ -25,7 +25,7 @@ class OptimizeTest extends \PHPUnit_Framework_TestCase
 
     public function testValidOptimizeWithNoIndex()
     {
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'POST',
@@ -43,7 +43,7 @@ class OptimizeTest extends \PHPUnit_Framework_TestCase
     public function testValidOptimizeWithIndex()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'POST',

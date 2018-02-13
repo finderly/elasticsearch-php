@@ -29,7 +29,7 @@ class AliasesTest extends \PHPUnit_Framework_TestCase
     public function testSetArrayBody()
     {
         $body = array('field' => 'value');
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'POST',
@@ -47,7 +47,7 @@ class AliasesTest extends \PHPUnit_Framework_TestCase
     public function testValidAliasesWithoutIndex()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',
@@ -65,7 +65,7 @@ class AliasesTest extends \PHPUnit_Framework_TestCase
     public function testValidAliasesWithIndex()
     {
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',

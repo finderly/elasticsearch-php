@@ -28,7 +28,7 @@ class AbstractEndpointTest extends \PHPUnit_Framework_TestCase
 
     public function testPerformRequest()
     {
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()->once()
                          ->with(
                                  'GET',
@@ -38,7 +38,7 @@ class AbstractEndpointTest extends \PHPUnit_Framework_TestCase
                              )
                          ->getMock();
 
-        $stub = $this->getMockForAbstractClass('\Elasticsearch\Endpoints\AbstractEndpoint', array($mockTransport));
+        $stub = $this->getMockForAbstractClass('\Elasticsearch\Legacy\v1_2_3\Endpoints\AbstractEndpoint', array($mockTransport));
 
         $stub->expects($this->once())
             ->method('getURI')
@@ -54,9 +54,9 @@ class AbstractEndpointTest extends \PHPUnit_Framework_TestCase
 
     public function testSetOneParam()
     {
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
-        $stub = $this->getMockForAbstractClass('\Elasticsearch\Endpoints\AbstractEndpoint', array($mockTransport));
+        $stub = $this->getMockForAbstractClass('\Elasticsearch\Legacy\v1_2_3\Endpoints\AbstractEndpoint', array($mockTransport));
 
         $paramWhiteList = array(
             'param1',
@@ -76,9 +76,9 @@ class AbstractEndpointTest extends \PHPUnit_Framework_TestCase
 
     public function testSetMultipleParam()
     {
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
-        $stub = $this->getMockForAbstractClass('\Elasticsearch\Endpoints\AbstractEndpoint', array($mockTransport));
+        $stub = $this->getMockForAbstractClass('\Elasticsearch\Legacy\v1_2_3\Endpoints\AbstractEndpoint', array($mockTransport));
 
         $paramWhiteList = array(
             'param1',
@@ -105,9 +105,9 @@ class AbstractEndpointTest extends \PHPUnit_Framework_TestCase
      */
     public function testSetInvalidParam()
     {
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
-        $stub = $this->getMockForAbstractClass('\Elasticsearch\Endpoints\AbstractEndpoint', array($mockTransport));
+        $stub = $this->getMockForAbstractClass('\Elasticsearch\Legacy\v1_2_3\Endpoints\AbstractEndpoint', array($mockTransport));
 
         $paramWhiteList = array(
             'param1',
@@ -137,7 +137,7 @@ class AbstractEndpointTest extends \PHPUnit_Framework_TestCase
             'param3' => 'value'
         );
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()->once()
                          ->with(
                                  'GET',
@@ -148,7 +148,7 @@ class AbstractEndpointTest extends \PHPUnit_Framework_TestCase
                          ->getMock();
 
 
-        $stub = $this->getMockForAbstractClass('\Elasticsearch\Endpoints\AbstractEndpoint', array($mockTransport));
+        $stub = $this->getMockForAbstractClass('\Elasticsearch\Legacy\v1_2_3\Endpoints\AbstractEndpoint', array($mockTransport));
 
         $paramWhiteList = array(
             'sort',
@@ -205,7 +205,7 @@ class AbstractEndpointTest extends \PHPUnit_Framework_TestCase
             'param3' => 'value'
         );
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()->once()
                          ->with(
                                  'GET',
@@ -216,7 +216,7 @@ class AbstractEndpointTest extends \PHPUnit_Framework_TestCase
                          ->getMock();
 
 
-        $stub = $this->getMockForAbstractClass('\Elasticsearch\Endpoints\AbstractEndpoint', array($mockTransport));
+        $stub = $this->getMockForAbstractClass('\Elasticsearch\Legacy\v1_2_3\Endpoints\AbstractEndpoint', array($mockTransport));
 
         $paramWhiteList = array(
             'sort',

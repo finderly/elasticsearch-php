@@ -30,7 +30,7 @@ class ScrollTest extends \PHPUnit_Framework_TestCase
     {
         $body = 'scrollid';
 
-        $mockTransport = m::mock('\Elasticsearch\Transport');
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport');
 
         $action = new Scroll($mockTransport);
         $action->setBody($body);
@@ -44,7 +44,7 @@ class ScrollTest extends \PHPUnit_Framework_TestCase
         $body = 'scrollID';
         $uri = '/_search/scroll';
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',
@@ -67,7 +67,7 @@ class ScrollTest extends \PHPUnit_Framework_TestCase
         $body = 'scrollID';
         $uri = "/_search/scroll/$body";
 
-        $mockTransport = m::mock('\Elasticsearch\Transport')
+        $mockTransport = m::mock('\Elasticsearch\Legacy\v1_2_3\Transport')
                          ->shouldReceive('performRequest')->once()
                          ->with(
                                  'GET',
