@@ -38,10 +38,10 @@ class Suggest extends AbstractEndpoint
     public function getURI()
     {
         $index = $this->index;
-        $uri   = "/_suggest";
+        $uri   = "/_search";
 
         if (isset($index) === true) {
-            $uri = "/$index/_suggest";
+            $uri = "/$index/_search";
         }
 
         return $uri;
