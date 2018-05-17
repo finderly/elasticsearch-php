@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Elasticsearch\Namespaces;
 
 /**
@@ -20,7 +22,7 @@ class CatNamespace extends AbstractNamespace
      *        ['help']           = (bool) Return help information
      *        ['v']              = (bool) Verbose mode. Display column headers
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -47,7 +49,7 @@ class CatNamespace extends AbstractNamespace
      *        ['v']              = (bool) Verbose mode. Display column headers
      *        ['bytes']          = (enum) The unit in which to display byte values
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -73,7 +75,7 @@ class CatNamespace extends AbstractNamespace
      *        ['help']           = (bool) Return help information
      *        ['v']              = (bool) Verbose mode. Display column headers
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -100,7 +102,7 @@ class CatNamespace extends AbstractNamespace
      *        ['v']              = (bool) Verbose mode. Display column headers
      *        ['ts']             = (bool) Set to false to disable timestamping
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -119,7 +121,7 @@ class CatNamespace extends AbstractNamespace
     /**
      * $params['help'] = (bool) Return help information
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -144,7 +146,7 @@ class CatNamespace extends AbstractNamespace
      *        ['bytes']          = (enum) The unit in which to display byte values
      *        ['pri']            = (bool) Set to true to return stats only for primary shards
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -170,7 +172,7 @@ class CatNamespace extends AbstractNamespace
      *        ['help']           = (bool) Return help information
      *        ['v']              = (bool) Verbose mode. Display column headers
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -193,7 +195,7 @@ class CatNamespace extends AbstractNamespace
      *        ['help']           = (bool) Return help information
      *        ['v']              = (bool) Verbose mode. Display column headers
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -216,7 +218,7 @@ class CatNamespace extends AbstractNamespace
      *        ['help']           = (bool) Return help information
      *        ['v']              = (bool) Verbose mode. Display column headers
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -239,7 +241,7 @@ class CatNamespace extends AbstractNamespace
      *        ['help']           = (bool) Return help information
      *        ['v']              = (bool) Verbose mode. Display column headers
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -263,7 +265,7 @@ class CatNamespace extends AbstractNamespace
      *        ['v']              = (bool) Verbose mode. Display column headers
      *        ['bytes']          = (enum) The unit in which to display byte values
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -289,7 +291,7 @@ class CatNamespace extends AbstractNamespace
      *        ['help']           = (bool) Return help information
      *        ['v']              = (bool) Verbose mode. Display column headers
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -313,7 +315,7 @@ class CatNamespace extends AbstractNamespace
      *        ['v']              = (bool) Verbose mode. Display column headers
      *        ['bytes']          = (enum) The unit in which to display byte values
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -341,7 +343,7 @@ class CatNamespace extends AbstractNamespace
      *        ['bytes']          = (enum) The unit in which to display byte values
      *        ['repository']     = (string) Name of repository from which to fetch the snapshot information
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -369,7 +371,7 @@ class CatNamespace extends AbstractNamespace
      *        ['full_id']        = (bool) Enables displaying the complete node ids
      *        ['size']           = (enum) The multiplier in which to display values ([ "", "k", "m", "g", "t", "p" ])
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -397,7 +399,7 @@ class CatNamespace extends AbstractNamespace
      *        ['bytes']          = (enum) The unit in which to display byte values
      *        ['fields']         = (list) A comma-separated list of fields to return the fielddata size
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -423,7 +425,7 @@ class CatNamespace extends AbstractNamespace
      *        ['help']           = (bool) Return help information
      *        ['v']              = (bool) Verbose mode. Display column headers
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -444,7 +446,7 @@ class CatNamespace extends AbstractNamespace
      *        ['help']           = (bool) Return help information
      *        ['v']              = (bool) Verbose mode. Display column headers
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -475,7 +477,7 @@ class CatNamespace extends AbstractNamespace
      *        ['help']           = (bool) Return help information
      *        ['v']              = (bool) Verbose mode. Display column headers
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -499,7 +501,7 @@ class CatNamespace extends AbstractNamespace
      *        ['v']              = (bool) Verbose mode. Display column headers
      *        ['bytes']          = (enum) The unit in which to display byte values
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */

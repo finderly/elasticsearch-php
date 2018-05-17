@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Elasticsearch\Namespaces;
 
 use Elasticsearch\Endpoints\Ingest\Pipeline\Delete;
@@ -23,7 +25,7 @@ class IngestNamespace extends AbstractNamespace
      * $params['master_timeout']             = (time) Explicit operation timeout for connection to master node
      *        ['timeout']                    = (time) Explicit operation timeout
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -45,7 +47,7 @@ class IngestNamespace extends AbstractNamespace
     /**
      * $params['master_timeout']             = (time) Explicit operation timeout for connection to master node
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -68,7 +70,7 @@ class IngestNamespace extends AbstractNamespace
      * $params['master_timeout']             = (time) Explicit operation timeout for connection to master node
      *        ['timeout']                    = (time) Explicit operation timeout
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -92,7 +94,7 @@ class IngestNamespace extends AbstractNamespace
     /**
      * $params['verbose'] = (bool) Verbose mode. Display data output for each processor in executed pipeline
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -116,7 +118,7 @@ class IngestNamespace extends AbstractNamespace
     /**
      * $params[]
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Elasticsearch\Namespaces;
 
 use Elasticsearch\Endpoints\Remote\Info;
@@ -16,7 +18,7 @@ use Elasticsearch\Endpoints\Remote\Info;
 class RemoteNamespace extends AbstractNamespace
 {
     /**
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */

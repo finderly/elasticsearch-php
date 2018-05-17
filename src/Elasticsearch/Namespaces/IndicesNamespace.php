@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Elasticsearch\Namespaces;
 
 /**
@@ -16,7 +18,7 @@ class IndicesNamespace extends AbstractNamespace
     /**
      * $params['index'] = (list) A comma-separated list of indices to check (Required)
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return boolean
      */
@@ -46,7 +48,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['expand_wildcards']   = (enum) Whether to expand wildcard expression to concrete indices that are open, closed or both.
      *        ['local']   = (bool) Return local information, do not retrieve the state from master node (default: false)
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return bool
      */
@@ -74,7 +76,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['allow_no_indices']   = (bool) Whether to ignore if a wildcard indices expression resolves into no concrete indices. (This includes `_all` string or when no indices have been specified)
      *        ['expand_wildcards']   = (enum) Whether to expand wildcard expression to concrete indices that are open, closed or both.
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -97,7 +99,7 @@ class IndicesNamespace extends AbstractNamespace
      * $params['name']    = (string) The name of the template (Required)
      *        ['timeout'] = (time) Explicit operation timeout
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -120,7 +122,7 @@ class IndicesNamespace extends AbstractNamespace
      * $params['index']   = (list) A comma-separated list of indices to delete; use `_all` or empty string to delete all indices
      *        ['timeout'] = (time) Explicit operation timeout
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -161,7 +163,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['search']         = (boolean) Return information about search operations; use the `groups` parameter to include information for specific search groups
      *        ['store']          = (boolean) Return information about the size of the index
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -187,7 +189,7 @@ class IndicesNamespace extends AbstractNamespace
      * $params['index'] = (list) A comma-separated list of index names; use `_all` or empty string to perform the operation on all indices
      *        ['body']  = (list) A comma-separated list of index names; use `_all` or empty string to perform the operation on all indices
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -215,7 +217,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['allow_no_indices']   = (bool) Whether to ignore if a wildcard indices expression resolves into no concrete indices. (This includes `_all` string or when no indices have been specified)
      *        ['expand_wildcards']   = (enum) Whether to expand wildcard expression to concrete indices that are open, closed or both.
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -240,7 +242,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['timeout']        = (time) Explicit operation timeout
      *        ['master_timeout'] = (time) Specify timeout for connection to master
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -266,7 +268,7 @@ class IndicesNamespace extends AbstractNamespace
      * $params['index'] = (list) A comma-separated list of index names; use `_all` or empty string for all indices
      *        ['type']  = (list) A comma-separated list of document types
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -294,7 +296,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['field']            = (list) A comma-separated list of document fields
      *        ['include_defaults'] = (bool) specifies default mapping values should be returned
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -332,7 +334,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['allow_no_indices']   = (bool) Whether to ignore if a wildcard indices expression resolves into no concrete indices. (This includes `_all` string or when no indices have been specified)
      *        ['expand_wildcards']   = (enum) Whether to expand wildcard expression to concrete indices that are open, closed or both.
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -360,7 +362,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['allow_no_indices']   = (bool) Whether to ignore if a wildcard indices expression resolves into no concrete indices. (This includes `_all` string or when no indices have been specified)
      *        ['expand_wildcards']   = (enum) Whether to expand wildcard expression to concrete indices that are open, closed or both.
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -388,7 +390,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['allow_no_indices']   = (bool) Whether to ignore if a wildcard indices expression resolves into no concrete indices. (This includes `_all` string or when no indices have been specified)
      *        ['expand_wildcards']   = (enum) Whether to expand wildcard expression to concrete indices that are open, closed or both.
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -413,7 +415,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['active_only'] = (bool) Display only those recoveries that are currently on-going
      *        ['human']       = (bool) Whether to return time and byte values in human-readable format.
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -439,7 +441,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['allow_no_indices']   = (bool) Whether to ignore if a wildcard indices expression resolves into no concrete indices. (This includes `_all` string or when no indices have been specified)
      *        ['expand_wildcards']   = (enum) Whether to expand wildcard expression to concrete indices that are open, closed or both.
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return boolean
      */
@@ -470,7 +472,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['timeout'] = (time) Explicit timestamp for the document
      *        ['body']    = (time) Explicit timestamp for the document
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -502,7 +504,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['body']    = (time) Explicit operation timeout
      *        ['create']  = (bool) Whether the index template should only be added if new or can also replace an existing one
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -533,7 +535,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['source']              = (string) The URL-encoded query definition (instead of using the request body)
      *        ['body']                = (string) The URL-encoded query definition (instead of using the request body)
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -564,7 +566,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['ignore_indices'] = (enum) When performed on multiple indices, allows to ignore `missing` ones
      *        ['name']           = (list) A comma-separated list of alias names to return
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -593,7 +595,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['timeout']          = (time) Explicit operation timeout
      *        ['body']             = (time) Explicit operation timeout
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -622,7 +624,7 @@ class IndicesNamespace extends AbstractNamespace
      * $params['index'] = (list) A comma-separated list of index names; use `_all` for all indices (Required)
      *        ['type']  = (string) The name of the document type to delete (Required)
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -647,7 +649,7 @@ class IndicesNamespace extends AbstractNamespace
     /**
      * $params['name'] = (string) The name of the template (Required)
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -669,7 +671,7 @@ class IndicesNamespace extends AbstractNamespace
     /**
      * $params['name'] = (string) The name of the template (Required)
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return boolean
      */
@@ -696,7 +698,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['timeout'] = (time) Explicit operation timeout
      *        ['body']    = (time) Explicit operation timeout
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -730,7 +732,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['allow_no_indices']     = (bool) Whether to ignore if a wildcard indices expression resolves into no concrete indices. (This includes `_all` string or when no indices have been specified)
      *        ['expand_wildcards']     = (enum) Whether to expand wildcard expression to concrete indices that are open, closed or both.
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -754,7 +756,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['name']    = (string) The name of the alias to be deleted (Required)
      *        ['timeout'] = (time) Explicit timestamp for the document
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -780,7 +782,7 @@ class IndicesNamespace extends AbstractNamespace
      * $params['index']   = (string) The name of the index (Required)
      *        ['timeout'] = (time) Explicit operation timeout
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -814,7 +816,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['attributes']   = (list) A comma-separated list of token attributes to output, this parameter works only with `explain=true`
      *        ['format']       = (enum) Format of the output (["detailed", "text"])
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -851,7 +853,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['allow_no_indices']   = (bool) Whether to ignore if a wildcard indices expression resolves into no concrete indices. (This includes `_all` string or when no indices have been specified)
      *        ['expand_wildcards']   = (enum) Whether to expand wildcard expression to concrete indices that are open, closed or both.
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -875,7 +877,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['timeout'] = (time) Explicit timestamp for the document
      *        ['body']    = (time) Explicit timestamp for the document
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -901,7 +903,7 @@ class IndicesNamespace extends AbstractNamespace
      * $params['local']   = (bool) Return local information, do not retrieve the state from master node (default: false)
      *        ['timeout'] = (time) Explicit timestamp for the document
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -930,7 +932,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['allow_no_indices']   = (bool) Whether to ignore if a wildcard indices expression resolves into no concrete indices. (This includes `_all` string or when no indices have been specified)
      *        ['expand_wildcards']   = (enum) Whether to expand wildcard expression to concrete indices that are open, closed or both.
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return boolean
      */
@@ -962,7 +964,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['recovery']            = (boolean) Return information about shard recovery
      *        ['snapshot']            = (boolean) TODO: ?
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -984,7 +986,7 @@ class IndicesNamespace extends AbstractNamespace
     /**
      * $params['index'] = (list) A comma-separated list of index names; use `_all` or empty string to perform the operation on all indices
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -1010,7 +1012,7 @@ class IndicesNamespace extends AbstractNamespace
      * $params['index']   = (string) The name of the index (Required)
      *        ['timeout'] = (time) Explicit operation timeout
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -1032,7 +1034,7 @@ class IndicesNamespace extends AbstractNamespace
     /**
      * $params['index']   = (string) The name of the index
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -1060,7 +1062,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['allow_no_indices']   = (bool) Whether to ignore if a wildcard indices expression resolves into no concrete indices. (This includes `_all` string or when no indices have been specified)
      *        ['expand_wildcards']   = (enum) Whether to expand wildcard expression to concrete indices that are open, closed or both.
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -1088,7 +1090,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['allow_no_indices']   = (bool) Whether to ignore if a wildcard indices expression resolves into no concrete indices. (This includes `_all` string or when no indices have been specified)
      *        ['expand_wildcards']   = (enum) Whether to expand wildcard expression to concrete indices that are open, closed or both.
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -1115,7 +1117,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['expand_wildcards'] = (boolean) Whether to expand wildcard expression to concrete indices that are open, closed or both.
      *        ['operation_threading']
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
@@ -1140,7 +1142,7 @@ class IndicesNamespace extends AbstractNamespace
      *        ['timeout']        = (time) Explicit operation timeout
      *        ['master_timeout'] = (time) Specify timeout for connection to master
      *
-     * @param $params array Associative array of parameters
+     * @param array $params Associative array of parameters
      *
      * @return array
      */
